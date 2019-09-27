@@ -15,6 +15,7 @@ function start(){
             obj.sort(function(a,b) {
                 return a.id < b.id ? -1 : a.id > b.id ? 1 : 0
             });
+            
             for( i=0 ; i< obj.length; i++){
                 
                 var tabel = document.getElementById('tabela')
