@@ -1,11 +1,11 @@
 function start(){
     var i =0
-    var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest()
 
-    xhr.open('GET', 'https://fipeapi.appspot.com/api/1/carros/marcas.json');
+    xhr.open('GET', 'https://fipeapi.appspot.com/api/1/carros/marcas.json')
     
 
-    xhr.send(null);
+    xhr.send(null)
     xhr.onreadystatechange = function(){
         
         if(xhr.readyState === 4){
@@ -13,7 +13,7 @@ function start(){
             var obj = JSON.parse(xhr.responseText)
            console.log(obj)
             obj.sort(function(a,b) {
-                return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+                return a.id < b.id ? -1 : a.id > b.id ? 1 : 0
             });
             for( i=0 ; i< obj.length; i++){
                 
